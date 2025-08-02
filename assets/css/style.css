@@ -16,3 +16,12 @@ html, body {
 main {
     flex: 1;
 }
+
+.object-cover {
+    object-fit: cover;
+    height: 100%;
+}
+
+.card img {
+    max-height: 300px;
+}

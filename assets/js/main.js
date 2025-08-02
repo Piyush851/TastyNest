@@ -32,3 +32,20 @@ fetch("/TastyNest/components/footer.html")
     .finally(()=>{
         document.body.classList.remove("hidden");
     })
+// Loading carousel
+fetch("/TastyNest/components/carousel.html")
+    .then(response=>{
+        if(!response.ok) {
+            throw new Error("Failed to load carousel")
+        }
+        return response.text();
+    })
+    .then(html=> {
+        document.getElementById("carousel-placeholder").outerHTML = html;
+    })
+    .catch(error => {
+        console.error("Error loading carousel: ", error);
+    })
+    .finally(()=>{
+        document.body.classList.remove("hidden");
+    })
