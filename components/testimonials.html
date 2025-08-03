@@ -1,59 +1,108 @@
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div class="card text-center">
-                <div class="card-header">
-                    Featured
+<style>
+    .testimonial-card {
+        border: none;
+        border-radius: 1rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        height: 100%;
+        transition: transform 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .testimonial-text {
+        font-style: italic;
+        color: #555;
+        font-size: 1rem;
+    }
+
+    .stars {
+        color: #ffc107;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+</style>
+
+<section class="testimonial-section py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">What Our Guests Say</h2>
+
+        <div id="multiTestimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-inner">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card testimonial-card">
+                                <div class="card-body">
+                                    <p class="testimonial-text">"Absolutely loved the ambiance and the food was
+                                        delicious!"</p>
+                                    <div class="stars mb-2">★★★★★</div>
+                                    <h5 class="card-title">Priya Sharma</h5>
+                                    <p class="card-subtitle text-muted">Food Blogger</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card testimonial-card">
+                                <div class="card-body">
+                                    <p class="testimonial-text">"Biryani was top-notch, and the staff was super
+                                        friendly!"</p>
+                                    <div class="stars mb-2">★★★★☆</div>
+                                    <h5 class="card-title">Rahul Mehta</h5>
+                                    <p class="card-subtitle text-muted">Local Guide</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <p>Rating: 4.8/5</p>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card testimonial-card">
+                                <div class="card-body">
+                                    <p class="testimonial-text">"A perfect anniversary celebration. Beautifully
+                                        presented dishes."</p>
+                                    <div class="stars mb-2">★★★★★</div>
+                                    <h5 class="card-title">Anjali & Rakesh</h5>
+                                    <p class="card-subtitle text-muted">Happy Customers</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card testimonial-card">
+                                <div class="card-body">
+                                    <p class="testimonial-text">"Tasty Nest truly lives up to its name. Will be back
+                                        soon!"</p>
+                                    <div class="stars mb-2">★★★★★</div>
+                                    <h5 class="card-title">Meena Kapoor</h5>
+                                    <p class="card-subtitle text-muted">Chef</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-footer text-body-secondary">
-                    2 days ago
-                </div>
+
             </div>
-        </div>
-        <div class="carousel-item">
-            <div class="card text-center">
-                <div class="card-header">
-                    Featured
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <p>Rating: 4.8/5</p>
-                </div>
-                <div class="card-footer text-body-secondary">
-                    2 days ago
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <div class="card text-center">
-                <div class="card-header">
-                    Featured
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <p>Rating: 4.8/5</p>
-                </div>
-                <div class="card-footer text-body-secondary">
-                    2 days ago
-                </div>
-            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#multiTestimonialCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#multiTestimonialCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
+</section>
