@@ -18,9 +18,9 @@ fetch("/TastyNest/components/header.html")
                             .then(response => response.text())
                             .then(data => {
                                 document.getElementById('login-modal-container').innerHTML = data;
-
                                 const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
                                 modal.show();
+
                                 // Signup modal loading
                                 const signupLink = document.getElementById('openSignup');
                                 if(signupLink) {
@@ -48,6 +48,26 @@ fetch("/TastyNest/components/header.html")
                     } else {
                         const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
                         modal.show();
+                    }
+                });
+            }
+            // contact modal
+            const contactLink = document.getElementById('contactLink');
+            if (contactLink) {
+                contactLink.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    // Check if already loaded
+                    if (!document.querySelector('#contactModal')) {
+                        fetch('/TastyNest/contact.html')
+                            .then(res => res.text())
+                            .then(data => {
+                                document.getElementById('contact-modal-container').insertAdjacentHTML('beforeend', data);
+                                const contactModal = new bootstrap.Modal(document.getElementById('contactModal'));
+                                contactModal.show();
+                            });
+                    } else {
+                        const contactModal = new bootstrap.Modal(document.getElementById('contactModal'));
+                        contactModal.show();
                     }
                 });
             }
@@ -101,10 +121,3 @@ fetch("/TastyNest/components/testimonials.html")
     .catch(error => {
         console.error("Error loading testimonials: ", error);
     })
-
-// // Login modal
-// fetch('/TastyNest/components/header.html')
-//     .then(res => res.text())
-//     .then(data=> {
-//         document.getElementById('navbar-placeholder').innerHTML = data;
-//     });
