@@ -25,3 +25,14 @@ main {
 .card img {
     max-height: 300px;
 }
+/* menu section */
+.dish-card img {
+      height: 180px;
+      object-fit: cover;
+    }
+
+    /* cart button */
+    #cartCount {
+  font-size: 0.75rem;
+  padding: 4px 6px;
+}
