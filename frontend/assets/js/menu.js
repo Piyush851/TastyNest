@@ -9,7 +9,7 @@ const dishes = [
         name: "Paneer Tikka",
         type: "veg",
         category: "starters",
-        img: "/TastyNest/assets/images/dishes/panner tikka.jpg",
+        img: "/TastyNest/frontend/assets/images/dishes/panner tikka.jpg",
         price: 180,
         description:
             "Tender paneer cubes marinated in aromatic spices and grilled to perfection.",
@@ -18,7 +18,7 @@ const dishes = [
         name: "Chicken Biryani",
         type: "non-veg",
         category: "main-course",
-        img: "/TastyNest/assets/images/dishes/briyani.jpg",
+        img: "/TastyNest/frontend/assets/images/dishes/briyani.jpg",
         price: 250,
         description:
             "Aromatic basmati rice cooked with juicy chicken and exotic spices.",
@@ -27,7 +27,7 @@ const dishes = [
         name: "Lassi",
         type: "veg",
         category: "drinks",
-        img: "/TastyNest/assets/images/dishes/lassi.jpg",
+        img: "/TastyNest/frontend/assets/images/dishes/lassi.jpg",
         price: 60,
         description:
             "Refreshing yogurt-based drink blended with sugar and a hint of cardamom.",
@@ -36,7 +36,7 @@ const dishes = [
         name: "Garlic Naan",
         type: "veg",
         category: "breads",
-        img: "/TastyNest/assets/images/dishes/garlic naan.jpg",
+        img: "/TastyNest/frontend/assets/images/dishes/garlic naan.jpg",
         price: 40,
         description:
             "Soft, fluffy Indian flatbread infused with fresh garlic and butter.",
@@ -45,7 +45,7 @@ const dishes = [
         name: "Mutton Rogan Josh",
         type: "non-veg",
         category: "main-course",
-        img: "/TastyNest/assets/images/dishes/mutton rogan.jpg",
+        img: "/TastyNest/frontend/assets/images/dishes/mutton rogan.jpg",
         price: 320,
         description:
             "A rich and flavorful Kashmiri-style curry with tender mutton pieces.",
@@ -54,7 +54,7 @@ const dishes = [
         name: "Veg Spring Rolls",
         type: "veg",
         category: "starters",
-        img: "/TastyNest/assets/images/dishes/spring rolls.jpg",
+        img: "/TastyNest/frontend/assets/images/dishes/spring rolls.jpg",
         price: 120,
         description: "Crispy rolls stuffed with a mix of fresh sautéed vegetables.",
     },
@@ -62,7 +62,7 @@ const dishes = [
         name: "Sweet Corn Soup",
         type: "veg",
         category: "chinese",
-        img: "/TastyNest/assets/images/dishes/sweet corn.jpg",
+        img: "/TastyNest/frontend/assets/images/dishes/sweet corn.jpg",
         price: 90,
         description:
             "Warm and comforting soup made with sweet corn and finely chopped veggies.",
@@ -71,7 +71,7 @@ const dishes = [
         name: "Caesar Salad",
         type: "veg",
         category: "salads",
-        img: "/TastyNest/assets/images/dishes/caesar salad.jpg",
+        img: "/TastyNest/frontend/assets/images/dishes/caesar salad.jpg",
         price: 110,
         description:
             "Classic Caesar salad with fresh romaine, parmesan, and creamy dressing.",
@@ -80,7 +80,7 @@ const dishes = [
         name: "Chocolate Brownie",
         type: "veg",
         category: "desserts",
-        img: "/TastyNest/assets/images/dishes/chocolate browine.jpg",
+        img: "/TastyNest/frontend/assets/images/dishes/chocolate browine.jpg",
         price: 130,
         description:
             "Decadent, rich and fudgy brownie topped with a hint of chocolate glaze.",
@@ -89,7 +89,7 @@ const dishes = [
         name: "Butter Chicken",
         type: "non-veg",
         category: "main-course",
-        img: "/TastyNest/assets/images/dishes/butter chicken.jpg",
+        img: "/TastyNest/frontend/assets/images/dishes/butter chicken.jpg",
         price: 270,
         description:
             "Creamy tomato-based curry with tender chicken chunks and Indian spices.",
@@ -98,7 +98,7 @@ const dishes = [
         name: "Mango Shake",
         type: "veg",
         category: "drinks",
-        img: "/TastyNest/assets/images/dishes/mango shake.jpg",
+        img: "/TastyNest/frontend/assets/images/dishes/mango shake.jpg",
         price: 70,
         description:
             "Thick and luscious mango shake made from fresh Alphonso mangoes.",
@@ -107,7 +107,7 @@ const dishes = [
         name: "Cheese Naan",
         type: "veg",
         category: "breads",
-        img: "/TastyNest/assets/images/dishes/cheese naan.jpg",
+        img: "/TastyNest/frontend/assets/images/dishes/cheese naan.jpg",
         price: 50,
         description:
             "Fluffy naan stuffed with gooey cheese, perfect with any curry.",
@@ -116,7 +116,7 @@ const dishes = [
         name: "Combo Veg Thali",
         type: "veg",
         category: "combos",
-        img: "/TastyNest/assets/images/dishes/thali.jpg",
+        img: "/TastyNest/frontend/assets/images/dishes/thali.jpg",
         price: 220,
         description: "A complete meal with rice, roti, dal, sabzi, and dessert.",
     },
@@ -124,7 +124,7 @@ const dishes = [
         name: "Chef's Special Platter",
         type: "non-veg",
         category: "special",
-        img: "/TastyNest/assets/images/dishes/chef special platter.jpg",
+        img: "/TastyNest/frontend/assets/images/dishes/chef special platter.jpg",
         price: 360,
         description:
             "A grand assortment of chef's best non-veg dishes served together.",
@@ -133,7 +133,7 @@ const dishes = [
         name: "Vanilla Ice Cream",
         type: "veg",
         category: "desserts",
-        img: "/TastyNest/assets/images/dishes/vanila icecream.jpg",
+        img: "/TastyNest/frontend/assets/images/dishes/vanila icecream.jpg",
         price: 90,
         description: "Classic vanilla ice cream with rich and creamy texture.",
     },

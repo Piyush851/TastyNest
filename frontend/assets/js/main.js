@@ -1,5 +1,5 @@
 // Loading header
-fetch("/TastyNest/components/header.html")
+fetch("/TastyNest/frontend/components/header.html")
     .then((response) => {
         if (!response.ok) {
             throw new Error("Failed to load navbar");
@@ -14,7 +14,7 @@ fetch("/TastyNest/components/header.html")
             if (loginBtn) {
                 loginBtn.addEventListener("click", function () {
                     if (!document.querySelector("#exampleModal")) {
-                        fetch("/TastyNest/components/login-modal.html")
+                        fetch("/TastyNest/frontend/components/login-modal.html")
                             .then((response) => response.text())
                             .then((data) => {
                                 document.getElementById("login-modal-container").innerHTML =
@@ -36,7 +36,7 @@ fetch("/TastyNest/components/header.html")
                                         loginModal.hide();
                                         // Check is signup modal is already present
                                         if (!document.querySelector("#signupModal")) {
-                                            fetch("/TastyNest/components/signup-modal.html")
+                                            fetch("/TastyNest/frontend/components/signup-modal.html")
                                                 .then((res) => res.text())
                                                 .then((data) => {
                                                     document
@@ -71,7 +71,7 @@ fetch("/TastyNest/components/header.html")
                     e.preventDefault();
                     // Check if already loaded
                     if (!document.querySelector("#contactModal")) {
-                        fetch("/TastyNest/contact.html")
+                        fetch("/TastyNest/frontend/contact.html")
                             .then((res) => res.text())
                             .then((data) => {
                                 document
@@ -100,7 +100,7 @@ fetch("/TastyNest/components/header.html")
     });
 
 // Loading footer
-fetch("/TastyNest/components/footer.html")
+fetch("/TastyNest/frontend/components/footer.html")
     .then((response) => {
         if (!response.ok) {
             throw new Error("Failed to load footer");
@@ -114,7 +114,7 @@ fetch("/TastyNest/components/footer.html")
         console.error("Error loading footer: ", error);
     });
 // Loading carousel
-fetch("/TastyNest/components/carousel.html")
+fetch("/TastyNest/frontend/components/carousel.html")
     .then((response) => {
         if (!response.ok) {
             throw new Error("Failed to load carousel");
@@ -127,7 +127,7 @@ fetch("/TastyNest/components/carousel.html")
     .catch((error) => {
         console.error("Error loading carousel: ", error);
     });
-fetch("/TastyNest/components/testimonials.html")
+fetch("/TastyNest/frontend/components/testimonials.html")
     .then((response) => {
         if (!response.ok) {
             throw new Error("Failed to load testimonials");
