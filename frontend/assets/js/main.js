@@ -13,14 +13,14 @@ fetch("/TastyNest/frontend/components/header.html")
             const loginBtn = document.getElementById("loginBtn");
             if (loginBtn) {
                 loginBtn.addEventListener("click", function () {
-                    if (!document.querySelector("#exampleModal")) {
+                    if (!document.querySelector("#loginModal")) {
                         fetch("/TastyNest/frontend/components/login-modal.html")
                             .then((response) => response.text())
                             .then((data) => {
                                 document.getElementById("login-modal-container").innerHTML =
                                     data;
                                 const modal = new bootstrap.Modal(
-                                    document.getElementById("exampleModal")
+                                    document.getElementById("loginModal")
                                 );
                                 modal.show();
 
@@ -30,7 +30,7 @@ fetch("/TastyNest/frontend/components/header.html")
                                     signupLink.addEventListener("click", function (e) {
                                         e.preventDefault();
                                         const loginModalEl =
-                                            document.getElementById("exampleModal");
+                                            document.getElementById("loginModal");
                                         const loginModal =
                                             bootstrap.Modal.getInstance(loginModalEl);
                                         loginModal.hide();
@@ -58,7 +58,7 @@ fetch("/TastyNest/frontend/components/header.html")
                             });
                     } else {
                         const modal = new bootstrap.Modal(
-                            document.getElementById("exampleModal")
+                            document.getElementById("loginModal")
                         );
                         modal.show();
                     }
