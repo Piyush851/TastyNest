@@ -1,0 +1,77 @@
+
+/* Menu page */
+body {
+    font-family: "Quicksand", sans-serif;
+    background: #f9f9f9;
+}
+
+.navbar {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dish-card {
+    transition: transform 0.2s;
+}
+
+.dish-card:hover {
+    transform: scale(1.02);
+}
+
+.dish-card img {
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.dish-card .card-body {
+    background: #fff;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+#cartCount {
+    font-size: 0.75rem;
+    padding: 4px 6px;
+}
+
+.quantity-controls {
+    display: none;
+}
+
+.quantity-controls button {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-add {
+    width: 100%;
+    border-radius: 25px;
+}
+
+.badge-category {
+    background-color: #ffc107;
+    color: #000;
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.price-tag {
+    font-weight: bold;
+    color: #28a745;
+}
+
+.modal-content {
+    border-radius: 1rem;
+}
+
+.modal-header {
+    background: #343a40;
+    color: #fff;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.btn-checkout {
+    border-radius: 25px;
+}
