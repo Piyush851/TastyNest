@@ -36,3 +36,9 @@ main {
   font-size: 0.75rem;
   padding: 4px 6px;
 }
+/* for left container */
+.list-group-item:hover {
+  background-color: #343a40 !important;
+  color: #ffc107 !important;
+  transition: all 0.2s ease-in-out;
+}

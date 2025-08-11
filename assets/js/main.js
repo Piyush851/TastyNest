@@ -121,3 +121,23 @@ fetch("/TastyNest/components/testimonials.html")
     .catch(error => {
         console.error("Error loading testimonials: ", error);
     })
+
+
+    // slide container function which is on home page navbar
+
+    function loadUserInfo() {
+  const name = localStorage.getItem("userName") || "Guest";
+  const avatar = localStorage.getItem("userAvatar") || "https://i.pravatar.cc/50";
+  document.getElementById("userName").textContent = `Hello, ${name} 👋`;
+  document.getElementById("userAvatar").src = avatar;
+}
+
+function askUserInfo() {
+  let name = prompt("Enter your name:");
+  let avatar = prompt("Enter image URL for your profile:");
+  if (name) localStorage.setItem("userName", name);
+  if (avatar) localStorage.setItem("userAvatar", avatar);
+  loadUserInfo();
+}
+
+window.onload = loadUserInfo;

@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/TastyNest/assets/css/style.css">
     <link rel="stylesheet" href="/TastyNest/assets/css/responsive.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
     <title>TastyNest</title>
 </head>
+
 <body class="hidden">
     <main>
         <!-- Navbar -->
@@ -24,8 +32,13 @@
 
         <!-- hero section -->
         <div class="container my-5 p-5 d-flex flex justify-content-center gap-5 mx-auto">
-            <button class="btn btn-outline-secondary btn-lg">Reserve a table</button>
-            <button class="btn btn-outline-secondary btn-lg">Order online</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reserveModal">
+                📅 Reserve Table
+            </button>
+
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reserveModal">
+                Online Order
+            </button>
         </div>
 
         <!-- Card 1 -->
@@ -33,23 +46,27 @@
             <div class="card border-0 shadow rounded-4 overflow-hidden">
                 <div class="row g-0 align-items-center">
                     <!-- Image section -->
-                <div class="co-md-6">
-                    <div class="image-1">
-                        <img src="/TastyNest/assets/images/dishes/dish-table.jpg" alt="dish on table" class="img-fluid w-100 h-100 object-cover">
+                    <div class="co-md-6">
+                        <div class="image-1">
+                            <img src="/TastyNest/assets/images/dishes/dish-table.jpg" alt="dish on table"
+                                class="img-fluid w-100 h-100 object-cover">
+                        </div>
+                    </div>
+                    <!-- Text content -->
+                    <div class="col-md-6 p-4">
+                        <h3 class="mb-3">
+                            🍽️ Why People Choose Us
+                        </h3>
+                    </div>
+                    <div class="col-md-6 p-4">
+                        <p>
+                            At our place, it’s not just about food — it’s about the experience. From warm hospitality to
+                            mouth-watering dishes made with fresh ingredients, we put heart into everything we serve.
+                            Whether you’re here for a quick bite or a special night out, our cozy vibe and flavorful
+                            menu keep people coming back for more.
+                        </p>
                     </div>
                 </div>
-                <!-- Text content -->
-                <div class="col-md-6 p-4">
-                    <h3 class="mb-3">
-                        🍽️ Why People Choose Us
-                    </h3>
-                </div>
-                <div class="col-md-6 p-4">
-                    <p>
-                        At our place, it’s not just about food — it’s about the experience. From warm hospitality to mouth-watering dishes made with fresh ingredients, we put heart into everything we serve. Whether you’re here for a quick bite or a special night out, our cozy vibe and flavorful menu keep people coming back for more.
-                    </p>
-                </div>
-            </div>
             </div>
         </div>
 
@@ -59,10 +76,198 @@
         </div>
     </main>
 
+
+
+
+
+
+
+    <!-- <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reserveModal">
+  📅 Reserve Table
+</button> -->
+
+
+    <!-- Reservation Modal -->
+    <div class="modal fade" id="reserveModal" tabindex="-1" aria-labelledby="reserveModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title" id="reserveModalLabel">Reserve Your Table</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <form id="reservationForm">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="contact" class="form-label">Contact Number</label>
+                            <input type="tel" class="form-control" id="contact" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="seats" class="form-label">Number of Seats</label>
+                            <input type="number" class="form-control" id="seats" min="1" max="20" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Reservation Date</label>
+                            <input type="date" class="form-control" id="date" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="time" class="form-label">Reservation Time</label>
+                            <input type="time" class="form-control" id="time" required />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success w-100">Confirm Reservation</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center border-0 shadow">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title w-100">🎉 Reservation Confirmed</h5>
+                </div>
+                <div class="modal-body">
+                    <p class="fw-bold">Seats confirmed, thank you!<br>We look forward to seeing you. 😊</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-dark w-100" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("reservationForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // You can save reservation to localStorage or send to server here
+            const name = document.getElementById("name").value;
+            const contact = document.getElementById("contact").value;
+            const seats = document.getElementById("seats").value;
+
+            // Hide reserve modal
+            const reserveModal = bootstrap.Modal.getInstance(document.getElementById('reserveModal'));
+            reserveModal.hide();
+
+            // Show confirmation modal
+            const confirmModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+            confirmModal.show();
+
+            // Optionally clear the form
+            this.reset();
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- footer -->
     <div class="footer" id="footer-placeholder"></div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
     <script src="/TastyNest/assets/js/main.js"></script>
     <script src="/TastyNest/assets/js/form-validation.js"></script>
+
+
+    <!-- Offcanvas Sidebar Container before -->
+
+    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="leftMenu"
+        aria-labelledby="leftMenuLabel">
+        <div class="offcanvas-header border-bottom border-secondary">
+            <div class="d-flex align-items-center">
+                <img id="userAvatar" src="https://i.pravatar.cc/50" alt="Profile" class="rounded-circle me-2"
+                    style="width: 50px; height: 50px;">
+                <div>
+                    <h5 id="userName" class="mb-0">Hello, Guest 👋</h5>
+                    <small class="text-light">Welcome back!</small>
+                </div>
+            </div>
+            <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <!-- Profile Summary Section -->
+            <div class="mb-4">
+                <h5 class="text-uppercase fw-bold text-warning mb-3">📌 Profile Summary</h5>
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-0 py-2">📦 Your
+                        Orders</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-0 py-2">🛠️
+                        Manage Recommendations</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-0 py-2">❓ Online
+                        Ordering Help</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-0 py-2">📅 Your
+                        Booking</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-0 py-2">🪑 Table
+                        Booking Help</a>
+                </div>
+            </div>
+
+            <!-- More Section -->
+            <div>
+                <h5 class="text-uppercase fw-bold text-warning mb-3">⚙️ More</h5>
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-0 py-2">ℹ️
+                        About</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-0 py-2"
+                        onclick="askUserInfo()">✍️ Edit Profile</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-0 py-2">🚨
+                        Report Safety Emergency</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-danger border-0 py-2">🚪
+                        Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const sidebarElement = document.getElementById('leftMenu');
+
+        sidebarElement.addEventListener('hidden.bs.offcanvas', () => {
+            // Remove any lingering backdrops (fix for dim background issue)
+            document.querySelectorAll('.offcanvas-backdrop').forEach(el => el.remove());
+
+            // Also remove 'modal-open' class from body if present
+            document.body.classList.remove('modal-open');
+            document.body.style = '';
+        });
+    </script>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+        function loadUserInfo() {
+            const name = localStorage.getItem("userName") || "Guest";
+            const avatar = localStorage.getItem("userAvatar") || "https://i.pravatar.cc/50";
+
+            document.getElementById("userName").textContent = `Hello, ${name} 👋`;
+            document.getElementById("userAvatar").src = avatar;
+        }
+
+        function askUserInfo() {
+            let name = prompt("Enter your name:");
+            let avatar = prompt("Enter image URL for your profile (or leave blank for default):");
+            if (name) localStorage.setItem("userName", name);
+            if (avatar) localStorage.setItem("userAvatar", avatar);
+            loadUserInfo();
+        }
+
+        // Call this when page loads
+        window.onload = loadUserInfo;
+    </script>
+
+
 </body>
+
 </html>
